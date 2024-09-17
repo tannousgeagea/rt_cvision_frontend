@@ -18,7 +18,7 @@ const InputField = ({ param, value, onChange }) => {
           key={param.name}
           name={name}
           value={value}
-          description={param.description}
+          description={`${param.description}: ${param.value}`}
           onChange={onChange}
         />
       );
