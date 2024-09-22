@@ -26,13 +26,14 @@ const ServicePage = () => {
           <div className='processor-content'>
             <div className="processor-section">
               {Object.keys(data).map((item, idx) => (
-                <Link to={`/services/${item}`} key={idx}>
-                  <ProjectCard 
-                    project={item.replace("_", " ").toUpperCase()}
-                  />
-                </Link>
+                // <Link to={`/services/${item}`} key={idx}>
+                <ProjectCard 
+                  project={item}
+                />
+                // </Link>
               ))}
             </div>
+            
             {loading && 
               <div className='loading-spinner'>
                 <Spinner />

@@ -29,7 +29,7 @@ const ServiceParamsPage = () => {
               {Object.keys(processorData).map((item, idx) => (
                 <Link to={`/params/${item}`} key={idx}>
                   <ProjectCard 
-                    project={item.replace("_", " ").toUpperCase()}
+                    project={item}
                   />
                 </Link>
             ))}

@@ -37,7 +37,7 @@ const DynamicForm = ({ url_path, params }) => {
         {statusMessage && (
           <div className={`status-message ${statusMessage.type}`}>
             <span>{statusMessage.message}</span>
-            <button className="close-button" onClick={handleCloseMessage}>
+            <button onClick={handleCloseMessage}>
               &times;
             </button>
           </div>

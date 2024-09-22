@@ -15,10 +15,10 @@ const Navbar = () => {
       "ref": "/services",
     },
 
-    {
-      "item": "Params",
-      "ref": "/params",
-    },
+    // {
+    //   "item": "Params",
+    //   "ref": "/params",
+    // },
 
     {
       "item": 'Models',

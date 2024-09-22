@@ -9,7 +9,7 @@
 
 .processor-section {
     display: grid;
-    gap: 2rem;
+    gap: 3rem;
     max-width: 1200px;  /* Limit the maximum width of the grid */
     width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));  /* Responsive grid layout */
