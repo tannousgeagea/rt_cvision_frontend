@@ -1,4 +1,5 @@
 import React from 'react';
+import InputLabel from "./input-label";
 import ColorMapping from './color-picker';
 import iconDelete from '../../../assets/icons/icons8-delete-64.png';
 import './input-style.css'
@@ -38,15 +39,11 @@ const ValueMappings = ({ name, value, description, onChange }) => {  // Use name
     <div className='mapping-container'>
       <div className='mapping-content'>
         <div className='mapping-header'>
-            <div className="input-label">
-                <label>{name.replace(/_/g, ' ').toUpperCase()}</label>
-                <div className="info-section">
-                    <img src={infoIcon} alt="icon" />
-                    <div className="tooltip">
-                        <p className="description"><strong>{description}</strong></p>
-                    </div>
-                </div>
-            </div>
+          <InputLabel 
+              name={name}
+              description={description}
+          />
+
           <div className='add-mapping-button' onClick={addMapping}>
               <span>+ Add a new mapping</span>
           </div>

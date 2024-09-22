@@ -1,19 +1,15 @@
 import React from "react";
 import './input-style.css'
+import InputLabel from "./input-label";
 import infoIcon from '../../../assets/icons/info.png'
 
 const RangeInput = ({ name, value, description, metaInfo, onChange }) => {
     return (
         <div className="input-container">
-            <div className="input-label">
-                <label>{name.replace(/_/g, ' ').toUpperCase()}</label>
-                <div className="info-section">
-                    <img src={infoIcon} alt="icon" />
-                    <div className="tooltip">
-                        <p className="description"><strong>{description}</strong></p>
-                    </div>
-                </div>
-            </div>
+            <InputLabel 
+                name={name}
+                description={description}
+            />
             <div className="range-input ">
                 <span>{value}</span>
                 <input

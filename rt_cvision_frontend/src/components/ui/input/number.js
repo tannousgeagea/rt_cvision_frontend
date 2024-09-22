@@ -1,19 +1,15 @@
 import React from "react";
+import InputLabel from "./input-label";
 import './input-style.css'
 import infoIcon from '../../../assets/icons/info.png'
 
 const NumberInput = ({ name, value, description, onChange }) => {
     return (
         <div className="input-container">
-            <div className="input-label">
-                <label>{name.replace(/_/g, ' ').toUpperCase()}</label>
-                <div className="info-section">
-                    <img src={infoIcon} alt="icon" />
-                    <div className="tooltip">
-                        <p className="description"><strong>{description}</strong></p>
-                    </div>
-                </div>
-            </div>
+            <InputLabel 
+                name={name}
+                description={description}
+            />
             <input 
                 type="number"
                 min="0"
