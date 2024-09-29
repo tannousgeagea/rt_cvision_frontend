@@ -28,7 +28,7 @@ function WelcomePage() {
     }, []);
 
     const handleSelectClient = () => {
-      navigate("/clients");
+      navigate("/client");
     };
   
     return (

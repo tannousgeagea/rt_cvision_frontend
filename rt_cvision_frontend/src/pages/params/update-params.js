@@ -33,7 +33,7 @@ const ProcessorParamsPage = () => {
           <div className='processor-content'>
             <div className="processor-section-small">
               {Object.keys(processorData).map((item, idx) => (
-                  <Link to={`/params/${item}`} key={idx} className="no-underline-link">
+                  <Link to={`/client/params/${item}`} key={idx} className="no-underline-link">
                     <div className="processor-section-item">
                       <span>{item.replace("_", " ").toUpperCase()}</span>
                     </div>

@@ -7,12 +7,12 @@ const Navbar = () => {
   const items = [
     {
       "item": 'Live Stream',
-      "ref": "/",
+      "ref": "/client/livestream",
     },
 
     {
       "item": 'Services',
-      "ref": "/services",
+      "ref": "/client/services",
     },
 
     // {
@@ -22,12 +22,12 @@ const Navbar = () => {
 
     {
       "item": 'Models',
-      "ref": "/models",
+      "ref": "/client/models",
     },
 
     {
       "item": 'Deploy',
-      "ref": "/deploy",
+      "ref": "/client/deploy",
     },
 
   ]

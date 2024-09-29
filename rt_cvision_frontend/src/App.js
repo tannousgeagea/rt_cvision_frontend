@@ -13,15 +13,18 @@ const App = () => {
 
   return (
     <Router>
-      {/* <Layout> */}
-        <Routes>
-          <Route path="/" element={<WelcomePage />} />
-          <Route path="/services" element={<ServicePage />} />
-          <Route path='/params' element={<ServiceParamsPage />} />
-          <Route path='/services/:processorName' element={<ProcessorPage />} />
-          <Route path='/params/:processorName' element={<ProcessorParamsPage />} />
-        </Routes>
-      {/* </Layout> */}
+      <Routes>
+        <Route path="/" element={<WelcomePage />} />
+        <Route path="/client" element={<Layout />}>
+          <Route path="" element={<HomePage />} />
+          <Route path="services" element={<ServicePage />} />
+          <Route path='params' element={<ServiceParamsPage />} />
+          <Route path='services/:processorName' element={<ProcessorPage />} />
+          <Route path='params/:processorName' element={<ProcessorParamsPage />} />
+          <Route path="models" />
+          <Route path="deploy" />
+        </Route>
+      </Routes>
     </Router>
   );
 }

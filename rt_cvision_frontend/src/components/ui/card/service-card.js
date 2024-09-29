@@ -6,11 +6,11 @@ const ProjectCard = ({ project }) => {
     const navigate = useNavigate();
 
     const handleConfigure = () => {
-        navigate(`/params/${project}`);
+        navigate(`/client/params/${project}`);
     }
 
     const handleDetails = () => {
-        navigate(`/services/${project}`)
+        navigate(`/client/services/${project}`)
     }
 
     console.log(project)

@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './navbar';
 import Footer from './footer';
 import './layout.css';
+import { Outlet } from 'react-router-dom';
 
 const Layout = ({ children }) => {
   return (
@@ -11,7 +12,8 @@ const Layout = ({ children }) => {
           <Navbar />
         </div>
         <div className="layout-content">
-          {children}
+          {/* {children} */}
+          <Outlet />
         </div>
       </div>
 
