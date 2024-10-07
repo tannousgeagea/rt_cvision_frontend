@@ -1,0 +1,65 @@
+:root {
+    --background-gradient: linear-gradient(178deg, #ffff33 10%, #3333ff);
+    --gray: #34495eaa;
+    --darkgray: #2c3e50;
+  }
+
+.select-container {
+    position: relative; /* Ensure this is the parent container */
+    display: inline-block;
+    text-align: center;
+    width: 250px;
+
+}
+
+.select-button {
+    display: flex;
+    width: auto;
+    color: #fff;
+    background-color: var(--darkgray);
+    cursor: pointer;
+    margin-bottom: 0.2rem;
+    align-items: center;
+    align-content: center;
+    gap: 2rem;
+    width: 100%;
+    padding: 15px 10px;
+    justify-content: space-between;
+}
+
+.select-button span {
+    margin-left: 5px;
+}
+
+.select-button:hover {
+    background-color: var(--gray);
+}
+
+.select-drop-icon {
+    width: 24px;
+}
+
+.select-dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #34495e;
+    transition: .25s all ease;
+    padding: 15px 10px;
+    gap: 1rem;
+    border-radius: 6px;
+    width: 100%;
+    z-index: 10;
+    color: #fff;
+}
+
+.select-option {
+    display: flex;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.select-option:hover {
+    background-color: grey;
+}

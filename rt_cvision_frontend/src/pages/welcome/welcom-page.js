@@ -2,44 +2,61 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Select from "../../components/ui/button/select";
 import "./welcome-page.css";
 import productDemoGif from "../../assets/icons/product-demo.gif"
+import goIcon from '../../assets/icons/go.png'
 
 function WelcomePage() {
     const navigate = useNavigate();
+    const [client, setClient] = useState(null)
     const [message, setMessage] = useState(""); // For animated text
     const fullMessage =
       "Welcome to rt-CVision - Real-time computer vision to monitor, analyze, and optimize waste management processes.";
   
+
+    const options = ["AMK", "GML", "Tirme"];
+
     useEffect(() => {
       let index = 0;
       const interval = setInterval(() => {
         if (index < fullMessage.length) {
-          // Safeguard to avoid undefined being appended
-        //   setMessage((prev) => prev + (fullMessage[index] || ""));
             setMessage(fullMessage.slice(0, index + 1));
             index++;
         } else {
-          clearInterval(interval); // Stop once the full message is shown
+          clearInterval(interval);
         }
-      }, 50); // Adjust this for speed of animation
+      }, 50);
   
-      return () => clearInterval(interval); // Cleanup
+      return () => clearInterval(interval);
     }, []);
 
-    const handleSelectClient = () => {
-      navigate("/client");
+    const handleSelectClient = (option) => {
+      // navigate("/client");
+      setClient(option);
     };
+
+    const handleSelectedClient = () => {
+      navigate(`/${client}`)
+    }
   
     return (
       <div className="welcome-page">
         <div className="welcome-left">
             <div className="select-client">
-                <h2>Select Your Plant</h2>
-                <p>Please select your incineration plant to view the running services:</p>
-                <div className="select-client-btn" onClick={handleSelectClient}>
-                    Select Client
+                <h2>Select Client</h2>
+                <div className="navigate-client">
+                  <Select 
+                    options={options}
+                    onSelect={handleSelectClient}
+                  />
+
+                  <div className="select-client-btn" onClick={handleSelectedClient}>
+                      <img src={goIcon} alt="go-icon"></img>
+                  </div>
+
                 </div>
+
             </div>
         </div>
 
