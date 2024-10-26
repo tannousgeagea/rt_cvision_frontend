@@ -7,7 +7,7 @@ import useFetchData from "../../hooks/use-fetch-data";
 
 import '../style.css'
 import './update-params.css'
-import '../service/service.css'
+import '../service/services.css'
 import processorIcon from '../../assets/icons/capability.png'
 
 const ProcessorParamsPage = () => {

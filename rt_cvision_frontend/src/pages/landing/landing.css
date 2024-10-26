@@ -1,0 +1,27 @@
+/* src/components/TenantServices.css */
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin: auto;
+}
+
+.landing-header {
+  display: flex;
+  padding: 0.75rem;
+}
+
+.landing-header span {
+  font-size: 36px;
+}
+
+.tenant-services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 3rem;
+    margin: auto;
+    
+  }
+  

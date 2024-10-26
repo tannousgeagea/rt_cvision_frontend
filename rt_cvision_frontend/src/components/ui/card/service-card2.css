@@ -1,0 +1,63 @@
+/* src/components/ServiceCard.css */
+.service-card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 400px;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.service-card-header h3 {
+  margin: 0;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.service-card-header:hover h3 {
+  color: #4CAF50;
+}
+
+.service-card-header label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  gap: 1rem;
+}
+
+.service-card p.active {
+  color: #4CAF50;
+}
+
+.service-card p.inactive {
+  color: #FF5722;
+  font-size: large;
+  font-weight: bold;
+}
+
+.service-card button {
+  margin-top: 8px;
+  padding: 6px 12px;
+}

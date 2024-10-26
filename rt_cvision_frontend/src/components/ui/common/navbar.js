@@ -1,33 +1,30 @@
 
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import './navbar.css';
 
 const Navbar = () => {
 
+  const { tenantID } = useParams();
   const items = [
     {
       "item": 'Live Stream',
-      "ref": "/client/livestream",
+      "ref": `/${tenantID}/livestream`,
     },
 
     {
       "item": 'Services',
-      "ref": "/client/services",
+      "ref": `/${tenantID}/services`,
     },
-
-    // {
-    //   "item": "Params",
-    //   "ref": "/params",
-    // },
 
     {
       "item": 'Models',
-      "ref": "/client/models",
+      "ref": `/${tenantID}/models`,
     },
 
     {
       "item": 'Deploy',
-      "ref": "/client/deploy",
+      "ref": `/${tenantID}/deploy`,
     },
 
   ]

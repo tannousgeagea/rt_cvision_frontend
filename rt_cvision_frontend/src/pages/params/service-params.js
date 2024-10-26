@@ -4,7 +4,7 @@ import useFetchData from "../../hooks/use-fetch-data";
 import ProjectCard from '../../components/ui/card/service-card'
 import Spinner from '../../components/ui/animation/spinner'
 import '../style.css'
-import '../service/service.css'
+import '../service/services'
 import paramsIcon from '../../assets/icons/cloud.png'
 
 const ServiceParamsPage = () => {

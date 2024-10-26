@@ -32,12 +32,11 @@ function WelcomePage() {
     }, []);
 
     const handleSelectClient = (option) => {
-      // navigate("/client");
       setClient(option);
     };
 
     const handleSelectedClient = () => {
-      navigate(`/${client}`)
+      navigate(`/${client.toLowerCase()}/services`)
     }
   
     return (
