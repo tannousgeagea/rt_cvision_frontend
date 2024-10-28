@@ -12,8 +12,8 @@ import processorIcon from '../../assets/icons/capability.png'
 
 const ProcessorParamsPage = () => {
   const { processorName } = useParams();
-  const { data: processorData, loading: processorLoading, error: processorError } = useFetchData('/api/v1/processor')
-  const { data, loading, error } = useFetchData(`/api/v1/params/${processorName}`)
+  const { data: processorData, loading: processorLoading, error: processorError } = useFetchData('http://localhost:23085/api/v1/processor')
+  const { data, loading, error } = useFetchData(`http://localhost:23085/api/v1/params/${processorName}`)
 
   const { service_name, params = [] } = data || {};
   if (error || processorError) return <p>Error loading data</p>

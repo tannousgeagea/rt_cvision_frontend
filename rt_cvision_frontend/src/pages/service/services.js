@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import './services.css'
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
+import { baseURL } from "../../components/api/base";
 import useFetchData from "../../hooks/use-fetch-data";
 import Spinner from "../../components/ui/animation/spinner";
 import ServiceCard from "../../components/ui/card/service-card2";
+import useServiceData from "../../hooks/use-service-data";
 
 const ServicePage = () => {
   const { tenantID, serviceID } = useParams();
-  const { data, loading, error } = useFetchData('/api/v1/processor')
-  
+  const { data, loading, error } = useServiceData(baseURL, serviceID);
+
   const toggleActive = async (serviceId) => {
     const updatedServices = services.map((service) =>
       service.id === serviceId ? { ...service, is_active: !service.is_active } : service

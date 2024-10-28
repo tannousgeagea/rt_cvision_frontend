@@ -8,7 +8,7 @@ import '../service/services'
 import paramsIcon from '../../assets/icons/cloud.png'
 
 const ServiceParamsPage = () => {
-  const { data: processorData, loading: processorLoading, error: processorError } = useFetchData('/api/v1/processor')
+  const { data: processorData, loading: processorLoading, error: processorError } = useFetchData('http://localhost:23085/api/v1/processor')
 
   if (processorError) return <p>Error loading data</p>; 
   // if (processorLoading) return <p>Loading data...</p>; 

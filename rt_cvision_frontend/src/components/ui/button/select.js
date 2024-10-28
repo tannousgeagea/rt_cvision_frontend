@@ -34,7 +34,7 @@ const Select = ({ options, onSelect }) => {
     return (
         <div className="select-container" ref={selectRef}>
             <div className="select-button" onClick={handleToggleDropDown}>
-                {selectedOption ? <spin>{selectedOption}</spin> : <span>Select an option</span>}
+                {selectedOption ? <spin>{selectedOption.tenant_name}</spin> : <span>Select an option</span>}
                 <img src={DropArrowIcon} alt="drop-arrow" className="select-drop-icon"/>
             </div>
 
@@ -42,7 +42,7 @@ const Select = ({ options, onSelect }) => {
                 <div className="select-dropdown">
                     {options.map((option, idx) =>(
                         <div className="select-option" key={idx} onClick={() => handleSelectedOption(option)}>
-                            {option}
+                            {option.tenant_name}
                         </div>
                     ))}
                 </div>

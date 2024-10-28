@@ -2,20 +2,20 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { baseURL } from "../../components/api/base";
+import useFetchData from "../../hooks/use-fetch-data";
 import Select from "../../components/ui/button/select";
-import "./welcome-page.css";
 import productDemoGif from "../../assets/icons/product-demo.gif"
 import goIcon from '../../assets/icons/go.png'
+import "./welcome-page.css";
 
 function WelcomePage() {
     const navigate = useNavigate();
     const [client, setClient] = useState(null)
     const [message, setMessage] = useState(""); // For animated text
+    const { data, loading, error } = useFetchData(`${baseURL}/api/v1/tenants`)
     const fullMessage =
       "Welcome to rt-CVision - Real-time computer vision to monitor, analyze, and optimize waste management processes.";
-  
-
-    const options = ["AMK", "GML", "Tirme"];
 
     useEffect(() => {
       let index = 0;
@@ -36,7 +36,7 @@ function WelcomePage() {
     };
 
     const handleSelectedClient = () => {
-      navigate(`/${client.toLowerCase()}/services`)
+      navigate(`/${client.tenant_id.toLowerCase()}/services`)
     }
   
     return (
@@ -46,7 +46,7 @@ function WelcomePage() {
                 <h2>Select Client</h2>
                 <div className="navigate-client">
                   <Select 
-                    options={options}
+                    options={data}
                     onSelect={handleSelectClient}
                   />
 
