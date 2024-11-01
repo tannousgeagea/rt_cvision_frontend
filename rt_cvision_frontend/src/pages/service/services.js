@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './services.css'
-import { useParams, useSearchParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { baseURL } from "../../components/api/base";
-import useFetchData from "../../hooks/use-fetch-data";
 import Spinner from "../../components/ui/animation/spinner";
 import ServiceCard from "../../components/ui/card/service-card2";
 import useServiceData from "../../hooks/use-service-data";
@@ -10,6 +9,11 @@ import useServiceData from "../../hooks/use-service-data";
 const ServicePage = () => {
   const { tenantID, serviceID } = useParams();
   const { data, loading, error } = useServiceData(baseURL, serviceID);
+  const [services, setServices] = useState([])
+
+  useEffect(() => {
+    setServices(data)
+  }, [data])
 
   const toggleActive = async (serviceId) => {
     const updatedServices = services.map((service) =>
@@ -27,14 +31,13 @@ const ServicePage = () => {
   return (
       <div className="service-container">
         <div className="service-content">
-          {Object.keys(data).map((item, idx) => (
+          {services.map((item, idx) => (
             <ServiceCard
-              key={item.id}
+              key={idx}
               service={item}
               onToggleActive={toggleActive}
               onViewDetails={viewDetails}
             />
-            // </Link>
           ))}
           
           {loading && 

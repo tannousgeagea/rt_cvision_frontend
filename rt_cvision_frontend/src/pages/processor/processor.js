@@ -14,7 +14,7 @@ import processorIcon from '../../assets/icons/capability.png'
 
 const ProcessorPage = () => {
   const { tenantID, serviceID, processorName } = useParams();
-  const { data, loading, error } = useFetchData(`/api/v1/processor/group/${processorName}`)
+  const { data, loading, error } = useFetchData(`http://localhost:23085/api/v1/processor/group/${processorName}`)
   const [showDetails, setShowDetails] = useState(false)
   const [index, setIndex] = useState(null)
 
