@@ -4,7 +4,7 @@ import Footer from './footer';
 import './layout.css';
 import { Outlet } from 'react-router-dom';
 
-const Layout = ({ children }) => {
+const Layout = () => {
   return (
     <div className='layout-conatiner'>
       <div className="layout">

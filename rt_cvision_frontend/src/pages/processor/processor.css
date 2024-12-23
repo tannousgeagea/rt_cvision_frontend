@@ -2,9 +2,8 @@
 .processor-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   gap: 1rem;
-  margin: auto;
+  height: 100%;
 }
 
 .processor-header {
@@ -16,31 +15,44 @@
   font-size: 36px;
 }
 
+.processor-main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
 .processor-content {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: flex-start;
   gap: 3rem;
   margin: auto; 
   }
 
-.expanded {
+.pro-details {
   display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  /* transition: height 200ms; */
-  animation: expand 0.5s forwards;
+  overflow-y: scroll;
 }
+
+.expanded {
+  position: relative;
+  width: 60%;
+  max-width: 800px;
+  overflow: hidden;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+}
+
 
 .close-button {
   display: flex;
   border-radius: 6px;
-  /* border: 1px solid rgba(128, 128, 128, 0.246); */
+  border: 1px solid rgba(128, 128, 128, 0.246);
   justify-content: flex-end;
   width: fit-content;
   padding: 10px;
   cursor: pointer;
-  margin-bottom: -50px;
+  /* margin-bottom: -50px; */
   z-index: 10;
   margin-left: 10px;
   transition: all 0.5s ease;

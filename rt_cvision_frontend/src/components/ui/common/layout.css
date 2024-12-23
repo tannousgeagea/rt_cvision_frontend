@@ -20,13 +20,13 @@
 
 .layout-main {
     width: 100%;
-    background-color: #e5e7eb;
+    background-color: #e5e9eb9a;
     }
 
 .layout-header {
     display: flex;
     flex-direction: row;
-    background-color: #fff;
+    background: rgba(128, 0, 255, 0.7);
     justify-content: space-between;
     padding: 2rem;
     margin-bottom: 3rem;
@@ -40,7 +40,6 @@
     padding: 3rem;
     border-radius: .75rem;
     border-color: #e5ebeba8;
-    max-width: 1200px;
     background-color: #fff;
     margin-top: 3rem;
     box-shadow: 0 2px 0px rgba(0, 0, 0, 0.1);
@@ -48,8 +47,8 @@
     border-width: 0;
     border-style: solid;
     border-color: #e5e7eb;
-    max-height: 1200px;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
+    /* overflow-y: auto; */
     align-items: center;
     margin-left: 3rem;
     margin-right: 3rem;

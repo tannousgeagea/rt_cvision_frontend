@@ -1,10 +1,10 @@
 .processor-details {
-    padding: 20px;
+    padding: 2rem 1rem;
     margin: 0 auto;
     background-color: #f8f9fa;
     border-radius: 8px;
-    gap: 3rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
   }
 
 .processor-details h1 {
@@ -15,10 +15,9 @@
 .details {
   display: flex;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: 2rem;
   height: calc(100vh - 650px);
   justify-content: center;
-  /* overflow: scroll; */
   border: 1px solid #f8f9fa;
   padding: 20px;
 }

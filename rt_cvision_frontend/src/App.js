@@ -10,6 +10,7 @@ import Layout from './components/ui/common/layout';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import TenantServices from './pages/landing/landing';
 
+import ProcessorAccordion from './components/ui/panel/accordion';
 
 const App = () => {
 
@@ -25,6 +26,7 @@ const App = () => {
           <Route path=':tenantID/services/:serviceID/:processorName/params' element={<ProcessorParamsPage />} />
           <Route path=":tenantID/models" />
           <Route path=":tenantID/deploy" />
+          <Route path=':tenantID/accordian' element={<ProcessorAccordion />} />
         </Route>
       </Routes>
     </Router>

@@ -1,7 +1,6 @@
 /* src/components/ServiceCard.css */
 .service-card {
   border: 1px solid #ddd;
-  padding: 16px;
   border-radius: 8px;
   margin: 8px;
   display: flex;
@@ -9,7 +8,7 @@
   justify-content: space-between;
   position: relative;
   width: 400px;
-  padding: 2rem;
+  padding: 3rem;
   background: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -47,17 +46,41 @@
   gap: 1rem;
 }
 
-.service-card p.active {
-  color: #4CAF50;
+.status-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  color: black; /* Always keep the text black */
+  font-size: 16px; /* Optional styling */
 }
 
-.service-card p.inactive {
-  color: #FF5722;
-  font-size: large;
-  font-weight: bold;
+.status-text p {
+  padding: 0.25rem 1.25rem; 
+  border-radius: 0.55rem;
+  width: fit-content;
 }
 
-.service-card button {
+.status-text p.active {
+  background: #4CAF50;
+}
+
+.status-text p.inactive {
+  background: #FF5722;
+}
+
+.detail-button {
   margin-top: 8px;
   padding: 6px 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.1s ease;
+  background-color: rgba(181, 178, 178, 0.365);
+}
+
+
+.detail-button:hover {
+  font-weight: bold;
 }

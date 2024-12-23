@@ -18,11 +18,11 @@
 }
 
 .author-name {
-    font-size: 22px;  /* Adjust size as needed */
+    font-size: 16px;  /* Adjust size as needed */
     color: #333;  /* Example color */
-    margin-left: 50px;
-    font-weight: bold;
-    font-style: italic;
+    padding: 0.25rem;
+    font-weight: 700;
+    font-family: Inter,sans-serif;
 }
 
 .social-icons {
