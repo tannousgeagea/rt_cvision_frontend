@@ -7,7 +7,7 @@ import ServiceCard from "../../components/ui/card/service-card2";
 import useServiceData from "../../hooks/use-service-data";
 
 const ServicePage = () => {
-  const { tenantID, serviceID } = useParams();
+  const { tenantName, tenantID, serviceID } = useParams();
   const { data, loading, error } = useServiceData(baseURL, serviceID);
   const [services, setServices] = useState([])
 
@@ -23,7 +23,7 @@ const ServicePage = () => {
     };
 
   const viewDetails = (serviceId) => {
-    window.location.href = `/${tenantID}/services/${serviceID}/${serviceId}`;
+    window.location.href = `/${tenantName}/${tenantID}/services/${serviceID}/${serviceId}`;
   };
 
   if (error) return <p>Error ...</p>

@@ -2,14 +2,14 @@
 import React, { useState, useEffect } from 'react';
 import { baseURL } from '../../components/api/base';
 import useFetchData from '../../hooks/use-fetch-data';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import ServiceCard from '../../components/ui/card/service-card2';
 import "./landing.css"
 
 
 const TenantServices = () => {
 
-  const { tenantID } = useParams();
+  const { tenantName, tenantID } = useParams();
   const { data, loading, error } = useFetchData(`${baseURL}/api/v1/instances/${tenantID}`);
   const [services, setServices] = useState(data);
 
@@ -28,7 +28,7 @@ const TenantServices = () => {
     };
 
   const viewDetails = (serviceId) => {
-    window.location.href = `/${tenantID}/services/${serviceId}`;
+    window.location.href = `/${tenantName}/${tenantID}/services/${serviceId}`;
   };
 
   return (

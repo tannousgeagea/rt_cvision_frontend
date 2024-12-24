@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css'
 import HomePage from './pages/home/home';
-import WelcomePage from './pages/welcome/welcom-page';
+import WelcomePage from './pages/welcome/welcome-page';
 import ServicePage from './pages/service/services';
 import ProcessorPage from './pages/processor/processor';
 import ProcessorParamsPage from './pages/params/update-params';
@@ -19,14 +19,14 @@ const App = () => {
       <Routes>
         <Route path="/" element={<WelcomePage />} />
         <Route path="/" element={<Layout />}>
-          <Route path=":tenantID/livestream" element={<HomePage />} />
-          <Route path=":tenantID/services" element={<TenantServices />} />
-          <Route path=":tenantID/services/:serviceID" element={<ServicePage />} />
-          <Route path=':tenantID/services/:serviceID/:processorName' element={<ProcessorPage />} />
-          <Route path=':tenantID/services/:serviceID/:processorName/params' element={<ProcessorParamsPage />} />
-          <Route path=":tenantID/models" />
-          <Route path=":tenantID/deploy" />
-          <Route path=':tenantID/accordian' element={<ProcessorAccordion />} />
+          <Route path=":tenantName/:tenantID/livestream" element={<HomePage />} />
+          <Route path=":tenantName/:tenantID/services" element={<TenantServices />} />
+          <Route path=":tenantName/:tenantID/services/:serviceID" element={<ServicePage />} />
+          <Route path=':tenantName/:tenantID/services/:serviceID/:processorName' element={<ProcessorPage />} />
+          <Route path=':tenantName/:tenantID/services/:serviceID/:processorName/params' element={<ProcessorParamsPage />} />
+          <Route path=":tenantName/:tenantID/models" />
+          <Route path=":tenantName/:tenantID/deploy" />
+          <Route path=':tenantName/:tenantID/accordian' element={<ProcessorAccordion />} />
         </Route>
       </Routes>
     </Router>

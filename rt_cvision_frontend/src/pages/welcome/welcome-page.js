@@ -36,7 +36,7 @@ function WelcomePage() {
     };
 
     const handleSelectedClient = () => {
-      navigate(`/${client.tenant_id.toLowerCase()}/services`)
+      navigate(`/${client.tenant_name.toLowerCase()}/${client.tenant_id}/services`)
     }
   
     return (
