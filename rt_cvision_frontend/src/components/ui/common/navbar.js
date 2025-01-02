@@ -14,31 +14,31 @@ import DeployIcon from '../../../assets/icons/nav/shuttle.png'
 
 const Navbar = () => {
 
-  const { tenantID } = useParams();
+  const { tenantName, tenantID } = useParams();
   const [isExpanded, setIsExpanded] = useState(true);
 
   const items = [
     {
       "item": 'Live Stream',
-      "ref": `/${tenantID}/livestream`,
+      "ref": `/${tenantName}/${tenantID}/livestream`,
       "icon": LiveStreamIcon,
     },
 
     {
       "item": 'Services',
-      "ref": `/${tenantID}/services`,
+      "ref": `/${tenantName}/${tenantID}/services`,
       "icon": ServicesIcon
     },
 
     {
       "item": 'Models',
-      "ref": `/${tenantID}/models`,
+      "ref": `/${tenantName}/${tenantID}/models`,
       "icon": ModelsIcon
     },
 
     {
       "item": 'Deploy',
-      "ref": `/${tenantID}/deploy`,
+      "ref": `/${tenantName}/${tenantID}/deploy`,
       "icon": DeployIcon
     },
 
