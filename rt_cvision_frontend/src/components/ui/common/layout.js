@@ -13,8 +13,8 @@ const Layout = () => {
         </div>
 
         <div className="layout-main">
-          <div className='layout-header'>
-          </div>
+          {/* <div className='layout-header'>
+          </div> */}
           
           <div className='layout-content'>
             <Outlet />
@@ -22,9 +22,9 @@ const Layout = () => {
         </div>
       </div>
 
-      <div className='layout-footer'>
+      {/* <div className='layout-footer'>
         <Footer />
-      </div>
+      </div> */}
     </div>
   );
 };
